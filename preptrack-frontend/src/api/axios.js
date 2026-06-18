@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "http://localhost:9090",
+  baseURL: "https://preptrack-13mf.onrender.com",
 });
