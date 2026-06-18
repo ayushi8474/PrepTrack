@@ -22,7 +22,7 @@ import com.preptrack.preptrack.model.Problem;
 import com.preptrack.preptrack.repository.ProblemRepository;
 import com.preptrack.preptrack.service.ProblemService;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/problems")
 public class ProblemController {
