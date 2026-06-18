@@ -1,4 +1,4 @@
-package com.preptrack.preptrack.controller; // 🌟 Aapka jo bhi main package naam hai wahi rakhna
+package com.preptrack.preptrack.controller;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,8 +13,8 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**") // Sabhi endpoints par apply hoga
-                        .allowedOrigins("https://preptrack-journal.onrender.com", "http://localhost:5173") // Live aur local dono allowed
+                registry.addMapping("/**")
+                        .allowedOriginPatterns("https://preptrack-journal.onrender.com", "http://localhost:*") // 🌟 This fixes the credential issue safely
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
